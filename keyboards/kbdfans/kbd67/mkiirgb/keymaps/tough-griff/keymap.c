@@ -9,7 +9,7 @@ enum Layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base Layer
      * ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────────────┬──────┐
-     * │ GEsc │   1  │   2  │   3  │   4  │   5  │   6  │   7  │   8  │   9  │   0  │   -  │   =  │   Backspace  │ Home │
+     * │   `  │   1  │   2  │   3  │   4  │   5  │   6  │   7  │   8  │   9  │   0  │   -  │   =  │   Backspace  │ Home │
      * ├──────┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──────────┼──────┤
      * │    Tab   │   Q  │   W  │   E  │   R  │   T  │   Y  │   U  │   I  │   O  │   P  │   [  │   ]  │     \    │ PgUp │
      * ├──────────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴──────────┼──────┤
@@ -31,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Layer 1
      * ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────────────┬──────┐
-     * │ GEsc │  F1  │  F2  │  F3  │  F4  │  F5  │  F6  │  F7  │  F8  │  F9  │  F10 │  F11 │  F12 │    Delete    │REBOOT│
+     * │  Esc │  F1  │  F2  │  F3  │  F4  │  F5  │  F6  │  F7  │  F8  │  F9  │  F10 │  F11 │  F12 │    Delete    │REBOOT│
      * ├──────┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──────────┼──────┤
-     * │          │RgbTog│RgbMod│RgbHui│RgbHud│RgbSai│RgbSad│RgbVai│RgbVad│      │PrtScr│ScrLck│ Pause│          │ PgUp │
+     * │          │RgbTog│RgbMod│RgbHui│RgbHud│RgbSai│RgbSad│RgbVai│RgbVad│      │PrtScr│ScrLck│ Pause│          │      │
      * ├──────────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴─┬────┴──────────┼──────┤
-     * │  Caps Lock │RgbSpi│RgbSpd│      │      │      │      │      │      │      │      │      │               │ PgDn │
+     * │  Caps Lock │RgbSpi│RgbSpd│      │      │      │      │      │      │      │      │      │   Play/Pause  │      │
      * ├────────────┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴───┬──┴────────┬──────┼──────┤
      * │      LSft      │      │      │      │      │      │      │      │      │      │      │           │  V+  │ Mute │
      * ├────────┬───────┴┬─────┴──┬───┴──────┴──────┴──────┴──────┴──────┴────┬─┴──────┼──────┴─┬──┬──────┼──────┼──────┤
@@ -45,11 +45,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_L1] = LAYOUT_65_ansi_blocker(
         KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  QK_RBT,
-        _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, KC_PGUP,
-        KC_CAPS, RGB_SPI, RGB_SPD, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, KC_PGDN,
+        _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, _______,
+        KC_CAPS, RGB_SPI, RGB_SPD, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_MPLY, _______,
         KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_VOLU, KC_MUTE,
-        _______, _______, _______,                   _______,                            MO(_L2), _______,          KC_MPRV, KC_VOLD, KC_MNXT
-),
+        _______, _______, _______,                   _______,                            MO(_L2), _______,          KC_MPRV, KC_VOLD, KC_MNXT),
     // clang-format on
 
     /* Layer 2
