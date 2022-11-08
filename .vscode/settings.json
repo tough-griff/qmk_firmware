@@ -15,5 +15,16 @@
         "ranges": "c"
     },
     "python.formatting.provider": "yapf",
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+
+    "terminal.integrated.profiles.windows": {
+        "QMK_MSYS": {
+            "path": "C:/QMK_MSYS/usr/bin/bash.exe",
+            "env": {
+                "MSYSTEM": "MINGW64",
+                "CHERE_INVOKING": "1"
+            },
+            "args": ["--login"]
+        }
+    }
 }
