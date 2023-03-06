@@ -3,6 +3,12 @@
     // Unofficially, QMK uses spaces for indentation
     "editor.insertSpaces": true,
     // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.build": true,
+        "**/*.hex": true,
+        "**/*.bin": true,
+        "**/*.uf2": true
+    },
     "files.associations": {
         "*.h": "c",
         "*.c": "c",
@@ -14,8 +20,14 @@
         "utility": "c",
         "ranges": "c"
     },
+    "[markdown]": {
+        "editor.trimAutoWhitespace": false,
+        "files.trimTrailingWhitespace": false
+    },
     "python.formatting.provider": "yapf",
-    "cmake.configureOnOpen": false,
+    "[json]": {
+	    "editor.formatOnSave": false
+    },
 
     "terminal.integrated.profiles.windows": {
         "QMK_MSYS": {
