@@ -1,14 +1,26 @@
 {
     "configurations": [
         {
+            "name": "Mac",
+            "defines": ["QMK_KEYBOARD_H=<quantum.h>"],
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "browse": {
+                "path": ["${workspaceFolder}"],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "compilerPath": "/opt/homebrew/bin/avr-gcc",
+            "compileCommands": "${workspaceFolder}/compile_commands.json"
+        },
+        {
             "name": "Win32",
             "defines": [
                 "QMK_KEYBOARD_H=<quantum.h>"
             ],
             "includePath": [
-                "${workspaceFolder}/quantum"
+                "${workspaceFolder}/**"
             ],
-            "intelliSenseMode": "windows-gcc-x64",
             "browse": {
                 "path": [
                     "${workspaceFolder}"
