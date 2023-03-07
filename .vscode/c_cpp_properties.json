@@ -2,19 +2,6 @@
     "configurations": [
         {
             "name": "Mac",
-            "defines": ["QMK_KEYBOARD_H=<quantum.h>"],
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "browse": {
-                "path": ["${workspaceFolder}"],
-                "limitSymbolsToIncludedHeaders": true
-            },
-            "compilerPath": "/opt/homebrew/bin/avr-gcc",
-            "compileCommands": "${workspaceFolder}/compile_commands.json"
-        },
-        {
-            "name": "Win32",
             "defines": [
                 "QMK_KEYBOARD_H=<quantum.h>"
             ],
@@ -27,8 +14,28 @@
                 ],
                 "limitSymbolsToIncludedHeaders": true
             },
-            "compilerPath": "C:\\QMK_MSYS\\mingw64\\bin\\arm-none-eabi-gcc.exe",
+            "compilerPath": "/opt/homebrew/bin/avr-gcc",
             "compileCommands": "${workspaceFolder}/compile_commands.json"
+        },
+        {
+            "name": "Linux",
+            "defines": [
+                "QMK_KEYBOARD_H=<quantum.h>"
+            ],
+            "includePath": [
+                "/usr/lib/gcc/arm-none-eabi/10.3.1/include",
+                "/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed",
+                "/usr/include/newlib",
+                "${workspaceFolder}/**"
+            ],
+            "browse": {
+                "path": [],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "compileCommands": "${workspaceFolder}/compile_commands.json",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
